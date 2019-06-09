@@ -1,0 +1,145 @@
+//$main-color: #59BD5A;
+
+.header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 72px;
+
+  margin: 0;
+  box-shadow: 0px 0px 16px rgba(38, 38, 38, 0.16);
+  font-weight: 500;
+
+  @media (max-width: 639px) {
+    justify-content: space-between;
+    padding: 0 8px;
+  }
+
+  &__destination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 389px;
+
+    @media (max-width: 1023px) {
+      width: 300px;
+    }
+
+    @media (max-width: 639px) {
+      display: none;
+    }
+
+    &-asap {
+      border: 1px solid #E0E0E0;
+      //box-sizing: border-box;
+      padding: 8px 12px;
+      height: 40px;
+      box-sizing: border-box;
+      border-radius: 2px;
+    }
+
+    & [for="street"] {
+      font-weight: 300;
+    }
+
+    &-location {
+      display: flex;
+      box-sizing: border-box;
+      width: 292px;
+      height: 40px;
+      border: 1px solid #E0E0E0;
+      border-radius: 2px;
+
+      @media (max-width: 1023px) {
+        width: 200px;
+
+        label {
+          padding: 0 5px;
+        }
+      }
+    }
+
+    .icon {
+      //position: relative;
+      box-sizing: border-box;
+      border: solid black 1px;
+      border-radius: 50% 50% 50% 0;
+      width: 14px;
+      height: 14px;
+      transform: rotate(-45deg);
+      margin: auto 12px;
+    }
+
+    .icon::after {
+      content: "";
+      display: block;
+      position: relative;
+      left: 3px;
+      top: 3px;
+
+      width: 4px;
+      height: 4px;
+      border: solid black 1px;
+      border-radius: 50%;
+    }
+
+    #street {
+      font-size: 16px;
+      font-family: "Roboto", sans-serif;
+      width: 80%;
+      border: none;
+      outline: none;
+    }
+
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 176px;
+
+    @media (max-width: 1023px) {
+      width: 160px;
+    }
+
+    .button {
+      //box-sizing: border-box;
+      display: block;
+      height: 40px;
+      box-sizing: border-box;
+      border-radius: 2px;
+      line-height: 40px;
+      padding: 0 15.5px;
+
+      text-decoration: none;
+      font-size: 13px;
+      //font-weight: 500;
+    }
+
+    .button:hover {
+      background: $main-color;
+    }
+
+    &-sign {
+      border: 1px solid #E0E0E0;
+      color: black;
+    }
+
+    &-register {
+      background-color: black;
+      color: white;
+
+    }
+  }
+
+  &__button-basket {
+    @media (max-width: 639px) {
+      display: none;
+    }
+
+  }
+
+  &__button-basket:hover {
+    transform: scale(1.2) rotate(180deg);
+  }
+}
