@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  //padding: 0 76px;
+
+  font-family: "Roboto", sans-serif;
+
+}
+
+$main-color: #59BD5A;
+
+
+@import 'header';
+@import 'main';
+@import 'footer';
